@@ -1,1 +1,2 @@
-worker: python main.py
+[build]
+builder = "python:3.11"
