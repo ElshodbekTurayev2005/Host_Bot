@@ -1,5 +1,8 @@
 [build]
 builder = "NIXPACKS"
 
+[config]
+python = "3.12"
+
 [deploy]
-start = "python main.py"
+startCommand = "python main.py"
