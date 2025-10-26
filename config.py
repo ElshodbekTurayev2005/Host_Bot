@@ -38,7 +38,7 @@ except Exception as e:
     raise
 
 # Admin ID
-ADMIN_ID = 1553336381
+ADMIN_ID = 5221981574
 
 # Yuklamalar papkasi
 UPLOADS_DIR = 'uploads'
