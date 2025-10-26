@@ -404,7 +404,7 @@ async def send_to_admin(report_id):
         f"🆔 <b>User ID:</b> <code>{user_id}</code>\n"
         f"📅 <b>Sana:</b> {date}\n\n"
         f"📝 <b>Murojaat matni:</b>\n{message}\n\n"
-        f"📎 <b>Dalil:</b> {"✅ Mavjud' if file_path else '❌ Yo'q"}\n"
+        f"📎 <b>Dalil:</b> {"✅ Mavjud' if file_path else '❌ Yo`q"}\n"
         f"{'=' * 30}"
     )
 
@@ -1091,7 +1091,7 @@ async def view_report(callback: CallbackQuery):
         f"📊 <b>Status:</b> {status_text}\n"
         f"🔐 <b>Tur:</b> {'🔒 Anonim' if anonymous else '👁 Ochiq'}\n\n"
         f"📝 <b>Murojaat matni:</b>\n{message}\n\n"
-        f"📎 <b>Dalil:</b> {"✅ Mavjud' if file_path else '❌ Yo'q"}\n"
+        f"📎 <b>Dalil:</b> {"✅ Mavjud' if file_path else '❌ Yo`q"}\n"
     )
 
     if admin_reply:
@@ -1262,7 +1262,7 @@ async def admin_view_report(callback: CallbackQuery):
         f"📊 <b>Status:</b> {status_text}\n"
         f"🔐 <b>Tur:</b> {'🔒 Anonim' if anonymous else '👁 Ochiq'}\n\n"
         f"📝 <b>Murojaat matni:</b>\n{message}\n\n"
-        f"📎 <b>Dalil:</b> {"✅ Mavjud' if file_path else '❌ Yo'q"}\n"
+        f"📎 <b>Dalil:</b> {"✅ Mavjud' if file_path else '❌ Yo`q"}\n"
     )
 
     if admin_reply:
