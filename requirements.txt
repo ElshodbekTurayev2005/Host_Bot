@@ -1,5 +1,5 @@
-aiogram
-aiosqlite
-openpyxl
-pydantic
+aiogram==3.3.0
+aiosqlite==0.17.0
+openpyxl==3.1.2
+pydantic==1.10.14
 python-dotenv
