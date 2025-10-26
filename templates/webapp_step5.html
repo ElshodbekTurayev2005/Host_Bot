@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Murojaat - 5-qadam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .container {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #1c2526;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #0088cc;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #006bb3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>5-qadam</h1>
+        <form method="post" action="/webapp/step5">
+            <input type="hidden" name="session_id" value="{{ session_id }}">
+            <label for="role">Siz kim sifatida murojaat qilmoqchisiz?</label>
+            <select name="role" required>
+                <option value="employee">🧑‍⚕️ Xodimman</option>
+                <option value="client">👤 Mijozman</option>
+            </select>
+            <button type="submit">Keyingi</button>
+        </form>
+    </div>
+    <script>
+        const tg = window.Telegram.WebApp;
+        tg.ready();
+        tg.expand();
+        tg.MainButton.setText("Yuborish").hide();
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Murojaat #{{ report[0] }}</h1>
+<ul>
+    <li>Ism: {{ report[1] }}</li>
+    <li>Yosh: {{ report[2] }}</li>
+    <li>Telefon: {{ report[3] }}</li>
+    <li>Rol: {{ report[4] }}</li>
+    <li>Anonim: {{ 'Ha' if report[5] else 'Yo\'q' }}</li>
+    <li>Sana: {{ report[8] }}</li>
+    <li>Matn: {{ report[6] }}</li>
+    {% if report[7] %}
+    <li><a href="/admin/download/{{ report[0] }}">Yuklab olish</a></li>
+    {% else %}
+    <li>Dalil yo'q</li>
+    {% endif %}
+</ul>
+<a href="/admin">Orqaga</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Admin Panel</h1>
+{% if reports %}
+<ul>
+    {% for report in reports %}
+    <li>#{report[0]} - {{ report[1] }} <a href="/admin/view/{{ report[0] }}">View</a> | <a href="/admin/delete/{{ report[0] }}">Delete</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Hozircha murojaatlar yo'q.</p>
+{% endif %}
+{% endblock %}
