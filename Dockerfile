@@ -1,14 +1,14 @@
-# 1. Use official Python image
-FROM python:3.10-slim
+# Use official Python image
+FROM python:3.10
 
-# 2. Set working directory
+# Set work directory
 WORKDIR /app
 
-# 3. Copy project files into container
+# Copy project files
 COPY . .
 
-# 4. Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install dependencies
+RUN pip install -r requirements.txt
 
-# 5. Run your bot
+# Run bot
 CMD ["python", "main.py"]

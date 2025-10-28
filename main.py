@@ -390,7 +390,7 @@ async def send_to_admin(report_id):
 
     # Foydalanuvchi ma'lumotlarini olish
     user = await get_user(user_id)
-    fullname = user[1] if user else "Noma'lum"
+    fullname = user[1] if user else 'Noma`lum'
 
     admin_text = (
         f"🆕 <b>YANGI MUROJAAT!</b>\n"
@@ -545,7 +545,7 @@ async def process_fullname(message: Message, state: FSMContext):
                 f"🎂 <b>Yosh:</b> {user[2]}\n"
                 f"👔 <b>Rol:</b> {user[3]}\n"
                 f"📞 <b>Telefon:</b> {user[4]}\n"
-                f"📅 <b>Ro'yxatdan o'tgan:</b> {user[5][:10] if user[5] else "Noma'lum"}\n\n"
+                f"📅 <b>Ro'yxatdan o'tgan:</b> {user[5][:10] if user[5] else 'Noma`lum'}\n\n"
                 f"📊 <b>STATISTIKA:</b>\n"
                 f"• Jami murojaatlar: {len(await get_user_reports(message.from_user.id))}\n"
                 f"• Yangi: {sum(1 for r in await get_user_reports(message.from_user.id) if r[11] == 'new')}\n"
@@ -594,7 +594,7 @@ async def process_age(message: Message, state: FSMContext):
                 f"🎂 <b>Yosh:</b> {user[2]}\n"
                 f"👔 <b>Rol:</b> {user[3]}\n"
                 f"📞 <b>Telefon:</b> {user[4]}\n"
-                f"📅 <b>Ro'yxatdan o'tgan:</b> {user[5][:10] if user[5] else "Noma'lum"}\n\n"
+                f"📅 <b>Ro'yxatdan o'tgan:</b> {user[5][:10] if user[5] else 'Noma`lum'}\n\n"
                 f"📊 <b>STATISTIKA:</b>\n"
                 f"• Jami murojaatlar: {len(await get_user_reports(message.from_user.id))}\n"
                 f"• Yangi: {sum(1 for r in await get_user_reports(message.from_user.id) if r[11] == 'new')}\n"
@@ -678,7 +678,7 @@ async def process_phone(message: Message, state: FSMContext):
                 f"🎂 <b>Yosh:</b> {user[2]}\n"
                 f"👔 <b>Rol:</b> {user[3]}\n"
                 f"📞 <b>Telefon:</b> {user[4]}\n"
-                f"📅 <b>Ro'yxatdan o'tgan:</b> {user[5][:10] if user[5] else "Noma'lum"}\n\n"
+                f"📅 <b>Ro'yxatdan o'tgan:</b> {user[5][:10] if user[5] else 'Noma`lum'}\n\n"
                 f"📊 <b>STATISTIKA:</b>\n"
                 f"• Jami murojaatlar: {len(await get_user_reports(message.from_user.id))}\n"
                 f"• Yangi: {sum(1 for r in await get_user_reports(message.from_user.id) if r[11] == 'new')}\n"
@@ -938,7 +938,7 @@ async def show_profile(callback: CallbackQuery):
         f"🎂 <b>Yosh:</b> {user[2]}\n"
         f"👔 <b>Rol:</b> {user[3]}\n"
         f"📞 <b>Telefon:</b> {user[4]}\n"
-        f"📅 <b>Ro'yxatdan o'tgan:</b> {user[5][:10] if user[5] else "Noma'lum"}\n\n"
+        f"📅 <b>Ro'yxatdan o'tgan:</b> {user[5][:10] if user[5] else 'Noma`lum'}\n\n"
         f"📊 <b>STATISTIKA:</b>\n"
         f"• Jami murojaatlar: {total_reports}\n"
         f"• Yangi: {new_reports}\n"
@@ -1262,7 +1262,7 @@ async def admin_view_report(callback: CallbackQuery):
         f"📊 <b>Status:</b> {status_text}\n"
         f"🔐 <b>Tur:</b> {'🔒 Anonim' if anonymous else '👁 Ochiq'}\n\n"
         f"📝 <b>Murojaat matni:</b>\n{message}\n\n"
-        f"📎 <b>Dalil:</b> {'✅ Mavjud' if file_path else '❌ Yo\'q'}\n"
+        f"📎 <b>Dalil:</b> {'✅ Mavjud' if file_path else '❌ Yo`q'}\n"
     )
 
     if admin_reply:
