@@ -1,14 +1,14 @@
-# Use official Python image
-FROM python:3.10
+# 1. Python image
+FROM python:3.10-slim
 
-# Set work directory
+# 2. Workdir
 WORKDIR /app
 
-# Copy project files
-COPY . .
+# 3. Copy project
+COPY . /app
 
-# Install dependencies
-RUN pip install -r requirements.txt
+# 4. Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Run bot
+# 5. Run bot
 CMD ["python", "main.py"]
